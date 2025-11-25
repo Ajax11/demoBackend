@@ -1,0 +1,8 @@
+-r requirements.in
+
+pip-tools
+ruff
+bandit
+black
+pip-tools
+pre-commit
