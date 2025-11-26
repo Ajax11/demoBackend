@@ -17,6 +17,8 @@ django-cors-headers==4.9.0
     # via -r requirements/requirements.in
 djangorestframework==3.16.1
     # via -r requirements/requirements.in
+python-dotenv==1.2.1
+    # via -r requirements/requirements.in
 sqlparse==0.5.3
     # via django
 tzdata==2025.2

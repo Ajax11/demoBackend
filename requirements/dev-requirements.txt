@@ -68,6 +68,8 @@ pyproject-hooks==1.2.0
     # via
     #   build
     #   pip-tools
+python-dotenv==1.2.1
+    # via -r requirements/requirements.in
 pytokens==0.3.0
     # via black
 pyyaml==6.0.3
