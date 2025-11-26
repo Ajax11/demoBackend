@@ -1,0 +1,60 @@
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    "testTools",
+]
+
+# Set the maximum line length to 88.
+line-length = 88
+
+[tool.ruff.lint]
+# Add the line-too-long rule to the enforced rule set. By default, Ruff
+# omits rules that overlap with the use of a formatter, like Black, but
+# we can override this behavior by explicitly adding the rule.
+extend-select = ["E501"]
+# Ignore line-length related errors if you prefer Black to handle it,
+# and have to commend the section of extend-select for ["E501"]
+#ignore = ["E501"]
+
+[tool.ruff.format]
+# Black uses double quotes by default
+quote-style = "double"
+# Black uses spaces for indentation
+indent-style = "space"
+# Enable reformatting of code snippets in docstrings.
+docstring-code-format = true
+# Format all docstring code snippets with a line length of 60.
+docstring-code-line-length = 60
+
+[tool.black]
+line-length = 88
+target-version = ['py314']
+include = '\.pyi?$'
+# 'extend-exclude' excludes files or directories in addition to the defaults
+#extend-exclude =

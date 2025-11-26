@@ -1,0 +1,32 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.14.1
+    hooks:
+      # Run the linter.
+      - id: ruff-check
+        stages: [pre-commit]
+        #args: [ --fix ]
+      # Run the formatter.
+      #- id: ruff-format
+  #- repo: https://github.com/psf/black
+    # Black version
+  #  rev: 25.9.0
+  #  hooks:
+  #    - id: black
+  #      args: [--line-length=88]
+  #      language_version: python3.14
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.9
+    hooks:
+      - id: bandit
+        args: ["-r"]
+        stages: [pre-commit]
+  - repo: local
+    hooks:
+      - id: trivy-scan
+        name: Trivy Security Scan (local)
+        entry: trivy fs --quiet --exit-code 1 --severity HIGH,CRITICAL .
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
