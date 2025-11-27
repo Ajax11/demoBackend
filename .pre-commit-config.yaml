@@ -17,7 +17,8 @@ repos:
   #      args: [--line-length=88]
   #      language_version: python3.14
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.9
+    #rev: 1.7.9
+    rev: 1.9.2
     hooks:
       - id: bandit
         args: ["-r"]
