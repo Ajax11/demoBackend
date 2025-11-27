@@ -1,4 +1,4 @@
 
-Django==3.0.1   # vulnerabilidad CVE-2020-7471 # 5.2.8
+Django==5.2.8   # vulnerabilidad CVE-2020-7471 # 5.2.8
 requests==2.19.1
 urllib3==1.23
