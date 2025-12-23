@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "web",
 ]
+# "vulnerable_examples"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -81,13 +82,27 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+
+# "default": {
+#    "ENGINE": "django.db.backends.sqlite3",
+#    "NAME": BASE_DIR / "db.sqlite3",
+# }
+
+db_name = os.getenv("name")
+db_user = os.getenv("user")
+db_password = os.getenv("password")
+db_host = os.getenv("host")
+db_port = os.getenv("port")
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": db_name,
+        "USER": db_user,
+        "PASSWORD": db_password,
+        "HOST": db_host,
+        "PORT": db_port,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
