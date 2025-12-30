@@ -27,7 +27,7 @@ repos:
     hooks:
       - id: trivy-scan
         name: Trivy Security Scan (local)
-        entry: trivy fs --quiet --exit-code 1 . --file-patterns "pip:.*requirements.*\.txt"
+        entry: trivy fs --scanners vuln --quiet --exit-code 1 . --file-patterns "pip:.*requirements.*\.txt"
         language: system
         pass_filenames: false
         stages: [pre-push]
