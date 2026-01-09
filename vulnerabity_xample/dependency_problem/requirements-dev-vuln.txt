@@ -1,4 +1,4 @@
 
-Django==5.2.8       # vulnerabilidad CVE-2025-13372     # 5.2.9
-requests==2.32.0    # vulnerabilidad CVE-2024-47081     # 2.32.4
-urllib3==2.3.0      # vulnerabilidad CVE-2025-66418     # 2.6.0
+#Django==5.2.8       # vulnerabilidad CVE-2025-13372     # 5.2.9
+#requests==2.32.0    # vulnerabilidad CVE-2024-47081     # 2.32.4
+#urllib3==2.3.0      # vulnerabilidad CVE-2025-66418     # 2.6.0
