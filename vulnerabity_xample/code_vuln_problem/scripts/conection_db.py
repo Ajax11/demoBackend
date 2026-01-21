@@ -13,11 +13,11 @@ host = os.getenv("host")
 port = os.getenv("port")
 
 
-# dbname = "mydb"
-# user = "postgres"
-# password = "postgres"
-# host = "localhost"
-# port = 5432
+#dbname = "mydb"
+#user = "postgres"
+#password = "postgres"
+#host = "localhost"
+#port = 5432
 
 
 try:
