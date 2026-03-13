@@ -37,10 +37,19 @@ line-length = 88
 # Add the line-too-long rule to the enforced rule set. By default, Ruff
 # omits rules that overlap with the use of a formatter, like Black, but
 # we can override this behavior by explicitly adding the rule.
-extend-select = ["E501", "I"]
+#select = ["E401"]
+#extend-select = ["E501"]
+extend-select = ["E101", "E501", "I001", "DJ", "N", "ASYNC", "B", "TRY"]
 # Ignore line-length related errors if you prefer Black to handle it,
 # and have to commend the section of extend-select for ["E501"]
 #ignore = ["E501"]
+extend-ignore = ["N803","N806"]
+
+# Rules to avoid complicated behavior in the test case scenario and
+# Django auto-generated content
+[tool.ruff.lint.per-file-ignores]
+"**/migrations/*.py" = ["N801", "N802"]
+"**/tests/*.py" = ["N802"]
 
 [tool.ruff.format]
 # Black uses double quotes by default
